@@ -1,11 +1,19 @@
 {
-  "name": "line-bot-with-imgur-image-reply-example",
-  "version": "0.0.1",
-  "dependencies": {
-    "@line/bot-sdk": "^1.0.0",
-    "cron": "^1.2.1"
-  },
+  "name": "gracebot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test_webhook.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node test_webhook.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@line/bot-sdk": "^1.1.0",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongoose": "^4.10.1",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
   }
 }

@@ -1,12 +1,12 @@
-var push = require('./push.js');
-var express = require('express');
-const app = express();
-var server = app.listen(process.env.PORT || 8081, function(){
-  var port = server.address().port;
-  console.log('App now running on port',port);
-})
-app.get('/push', (req, res) => {
-  res.status(200).send('Hello, world!');
-  push.push('tony');
-});
-push.push('tony');
+'use strict'
+const Service = require('./lib/clients/v2/Service')
+const SignatureValidator = require('./lib/clients/v2/SignatureValidator')
+
+module.exports = {
+
+  init (options) {
+    this.client = new Service(options)
+    this.validator = new SignatureValidator(options)
+  }
+
+}
