@@ -1,0 +1,11 @@
+{
+  "name": "line-bot-with-imgur-image-reply-example",
+  "version": "0.0.1",
+  "dependencies": {
+    "@line/bot-sdk": "^1.0.0",
+    "cron": "^1.2.1"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}

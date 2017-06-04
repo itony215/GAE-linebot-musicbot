@@ -1,4 +1,5 @@
 cron:
 - description: daily summary job
-  url: /index
-  schedule: every 5 minutes
+  url: /push
+  schedule: every saturday 09:00
+  timezone: Asia/Taipei
