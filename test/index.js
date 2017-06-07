@@ -1,12 +1,13 @@
-var push = require('./push.js');
+var push = require('./test.js');
 var express = require('express');
 const app = express();
-var server = app.listen(process.env.PORT || 8081, function(){
+var server = app.listen(process.env.PORT || 3000, function(){
   var port = server.address().port;
   console.log('App now running on port',port);
 })
-app.get('/push', (req, res) => {
+app.get('/', (req, res) => {
   res.status(200).send('Hello, world!');
-  push.push('tony');
+  console.log(req)
+  test.reply(req, res);
 });
-push.push('tony');
+

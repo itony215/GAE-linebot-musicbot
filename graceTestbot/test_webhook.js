@@ -1,6 +1,7 @@
 var data = require('./data');
 const line = require('./index')
 const push = require('./push.js')
+const remind = require('./remind.js')
 const giveweekly = require('./giveweekly.js')
 const dayoff = require('./dayoff.js')
 const pray = require('./pray.js')
@@ -97,6 +98,9 @@ app.post('/webhook/', line.validator.validateSignature(), (req, res, next) => {
       else if (event.message.text === '請假') {
         dayoff.ask(event);
       } 
+      else if (event.message.text === '服事') {
+       remind.timeSet(event);
+      }
       else if (event.message.text === '代禱') {
         pray.ask();
       }
